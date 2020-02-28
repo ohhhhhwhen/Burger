@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>MVC With Burgers!</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/js/burgers.js"></script>
-	</head>
-	<body>
-		{{!-- <img src=""> --}}
+	<title>Burgers!</title>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/assets/js/burgers.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+
+</head>
+
+<body>
+	<div class="jumbotron">
+		<h1>
+			<center>Any Burger Anytime</center>
+		</h1>
+		<br>
+		<center>
+			<img src="http://localhost:3008/assets/img/burger.png" id="burgerimg" alt="Burger"
+				style="height: 150px; width: 150px;">
+		</center>
+		<br>
 		{{{ body }}}
-	</body>
+	</div>
+</body>
+
 </html>

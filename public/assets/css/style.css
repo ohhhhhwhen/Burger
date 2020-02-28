@@ -1,0 +1,12 @@
+body, .jumbotron{
+    background-color: #f5c98b;
+}
+
+.row, .burgerForm{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    list-style-type: none;
+}

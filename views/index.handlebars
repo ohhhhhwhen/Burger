@@ -1,28 +1,46 @@
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-        <p>{{this.id}} {{this.burger_name}} </p>
-        <button data-id="{{this.id}}" data-devoured="{{this.devoured}}" class="devour">Devour Burger</button>
-    </li>
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>You Name it We Make It</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="newBurger">Burger Name:</label>
-        <input type="text" id="newBurger" name="name">
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <h3><center>Current Orders</center></h3>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>
+                    <p>{{this.id}}. {{this.burger_name}} <button data-id="{{this.id}}" data-devoured="{{this.devoured}}"
+                            class="change-devoured">Devour
+                            Burger</button> </p>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
+    <div class="col-md-4">
+        <div class="card">
+            <h3><center>Past Orders</center></h3>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li>
+                    <p>{{this.id}}. {{this.burger_name}} </p>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+<h2>
+    <center>You Name it We Make It</center>
+</h2>
+<form class="create-form">
+    <center>
+        <div class="form-group">
+            <label for="newBurger">Burger Name:</label>
+            <input type="text" id="newBurger" name="name">
+        </div>
 
-    <button type="submit">Add Burger</button>
+        <button type="submit">Add Burger</button>
+    </center>
 </form>
