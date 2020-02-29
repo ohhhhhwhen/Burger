@@ -1,32 +1,41 @@
 <div class="row">
     <div class="col-md-4">
         <div class="card">
-            <h3><center>Current Orders</center></h3>
-            <ul>
-                {{#each burgers}}
-                {{#unless devoured}}
-                <li>
-                    <p>{{this.id}}. {{this.burger_name}} <button data-id="{{this.id}}" data-devoured="{{this.devoured}}"
-                            class="change-devoured">Devour
-                            Burger</button> </p>
-                </li>
-                {{/unless}}
-                {{/each}}
-            </ul>
+            <h2>
+                <center>Current Orders</center>
+            </h2>
+            <center>
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <li>
+                        <p>{{this.id}}. {{this.burger_name}} <button data-id="{{this.id}}"
+                                data-devoured="{{this.devoured}}" class="change-devoured">Devour
+                                Burger</button> </p>
+                    </li>
+                    {{/unless}}
+                    {{/each}}
+
+                </ul>
+            </center>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card">
-            <h3><center>Past Orders</center></h3>
-            <ul>
-                {{#each burgers}}
-                {{#if devoured}}
-                <li>
-                    <p>{{this.id}}. {{this.burger_name}} </p>
-                </li>
-                {{/if}}
-                {{/each}}
-            </ul>
+            <h2>
+                <center>Past Orders</center>
+            </h2>
+            <center>
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <li>
+                        <p>{{this.id}}. {{this.burger_name}} </p>
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </center>
         </div>
     </div>
 </div>
