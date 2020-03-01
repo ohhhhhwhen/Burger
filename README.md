@@ -33,7 +33,7 @@ Project is created with:
 ## Running Pages
 * Here's a screen shot of the running page from an images folder:
 
- ![Home Page](public/img/running.png)
+ ![Home Page](public/assets/img/running.png)
 
 ## Key Notes
 * Bootstrap link for html format
